@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec-1 show-animate">
+        <h1 class="animate">Hey, I'm Varun Dua</h1>
+        <p class="animate">This is My new Project!</p>
+    </section>
+
+    <section class="sec-2">
+        <h1 class="animate">Keep Scrolling</h1>
+        <p class="animate">To watch more magic!</p>
+    </section>
+
+    <section class="sec-3">
+        <h1 class="animate">FEW Thing more!</h1>
+        <p class="animate">Isn't it intersting?</p>
+    </section>
+
+    <section class="sec-4">
+        <h1 class="animate">THANK YOU ❤️</h1>
+        <p class="animate">See you Next time!</p>
+    </section>
+
+    <section class="sec-5">
+        <div class="images">
+            <img src="images/img1.jpg" alt="" class="animate" style="--i:0;">
+            <img src="images/img2.jpg" alt="" class="animate" style="--i:1;">
+            <img src="images/img3.jpg" alt=""class="animate"  style="--i:2;">
+
+        </div>
+    </section>
+</body>
+
+<script>
+    let sections= document.querySelectorAll('section');
+window.onscroll =()=>
+{
+    sections.forEach(sec=>{
+        let top =window.scrollY;
+        let offset=sec.offsetTop -150;
+        let height=sec.offsetHeight;
+
+        if(top>=offset && top< offset+height)
+        {
+            sec.classList.add('show-animate');
+        }
+        else
+        {
+            sec.classList.remove('show-animate');
+        }
+    })
+}
+
+
+</script>
+</html>
